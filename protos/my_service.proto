@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package my;
+
+// 定义服务接口
+service MyService {
+  // 定义请求和响应消息
+
+  // 定义两个方法
+  rpc SayHello(Request) returns (Response) {}
+  rpc SayGoodbye(Request) returns (Response) {}
+}
+
+message Request {
+    string message = 1;
+}
+
+message Response {
+    string message = 1;
+}
